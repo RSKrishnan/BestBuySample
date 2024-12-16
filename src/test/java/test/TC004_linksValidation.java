@@ -8,22 +8,21 @@ import org.testng.annotations.Test;
 import base.ProjectSpecifiedMethod;
 import page.HomePage;
 
-public class TC002_ShoppingProduct extends ProjectSpecifiedMethod{
+public class TC004_linksValidation extends ProjectSpecifiedMethod{
 	@BeforeTest
 	public void setup() throws IOException {
-		testName="ShoppingTest";
-		testDescription="Testing the Shopping functionality";
+		testName="SignInTest";
+		testDescription="Testing the Menu validation";
 		testAuthor="Ram";
 		testCategory="Regression Testing";
-		sheetName="ShoppingTestData";
 	}
-	@Test(dataProvider="readData")
-	public void shopping(String item) {
+	
+	@Test
+	public void bottomLinkValidation() throws IOException {
         
 		HomePage obj=new HomePage(driver);
-		obj.search_Product(item)
-		.click_addToCart()
-		.click_continueShopping();
+		obj.click_menu()
+		.validate_menu();
+		
 	}
-
 }

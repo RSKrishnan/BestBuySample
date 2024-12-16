@@ -2,14 +2,30 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="incognito-Chrome"/>
-  <parameter name="url" value="https://www.bestbuy.com/?intl=nosplash"/>
+  <parameter name="url" value="https://www.bestbuy.com/"/>
   <listeners>
     <listener class-name="utils.ListnerClass"/>
   </listeners>
-  <test name="SignUp and login">
+  <test name="SignUp and SignIn">
     <parameter name="browser" value="incognito-Chrome"/>
     <classes>
-      <class name="test.TC003_SignUp"/>
+      <class name="test.TC001_SignIn"/>
     </classes>
-  </test> <!-- SignUp and login -->
+  </test> <!-- SignUp and SignIn -->
+  <test name="SignUp and SignIn(failed)">
+    <parameter name="browser" value="incognito-Chrome"/>
+    <classes>
+      <class name="test.TC001_SignIn">
+        <methods>
+          <include name="setup"/>
+          <include name="testDetails"/>
+          <include name="reportInitialization"/>
+          <include name="closebrowser"/>
+          <include name="Close"/>
+          <include name="launchAndLoadURL"/>
+          <include name="signInTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.TC001_SignIn -->
+    </classes>
+  </test> <!-- SignUp and SignIn(failed) -->
 </suite> <!-- Failed suite [Suite] -->

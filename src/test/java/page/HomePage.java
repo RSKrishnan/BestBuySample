@@ -46,6 +46,9 @@ public class HomePage extends ProjectSpecifiedMethod {
 	@FindBy(xpath="//*[text()='Continue shopping']")
 	WebElement continueShopping;
 
+	@FindBy(xpath="//*[text()='An account with this email already exists.']")
+	WebElement singupText;
+	
 	public HomePage(WebDriver driver) {
 		
 		this.driver = driver;
@@ -53,15 +56,15 @@ public class HomePage extends ProjectSpecifiedMethod {
 	}
 
 	public HomePage click_Account() throws IOException {
-		takeScreenShot("1.HomePage");
+		takeScreenShot("HomePage");
 		account.click();
 		return this;
 	}
 	public void validate_login() throws IOException {
 		String actual ="Best Buy | Official Online Store | Shop Now & Save";
 		String expected=driver.getTitle();
-		takeScreenShot("2.SingIn");
 		Assert.assertEquals(actual, expected);
+		takeScreenShot("SignIn");
 	}
 
 	public SignInPage click_signin() {
@@ -100,5 +103,12 @@ public class HomePage extends ProjectSpecifiedMethod {
 	public void validate_menu() {
 		List<WebElement> links = menuOptions;
 		brokenLinkChecking(links);
+	}
+
+	public void validate_signUp() throws IOException {
+		String actual ="An account with this email already exists.";
+		String expected=singupText.getText();
+		Assert.assertEquals(actual, expected);
+		takeScreenShot("SignUp");
 	}
 }

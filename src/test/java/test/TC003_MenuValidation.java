@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import base.ProjectSpecifiedMethod;
 import page.HomePage;
 
-public class TC004_MenuValidation extends ProjectSpecifiedMethod{
+public class TC003_MenuValidation extends ProjectSpecifiedMethod{
 	@BeforeTest
 	public void setup() throws IOException {
 		testName="SignInTest";

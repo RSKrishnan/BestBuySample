@@ -4,7 +4,7 @@ import base.ProjectSpecifiedMethod;
 import page.CartPage;
 import page.PaymentDetails;
 
-public class TC005_PayementInfo extends ProjectSpecifiedMethod{
+public class TC006_PayementInfo extends ProjectSpecifiedMethod{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

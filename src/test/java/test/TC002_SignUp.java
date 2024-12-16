@@ -9,7 +9,7 @@ import base.ProjectSpecifiedMethod;
 import page.CartPage;
 import page.HomePage;
 
-public class TC003_SignUp extends ProjectSpecifiedMethod{
+public class TC002_SignUp extends ProjectSpecifiedMethod{
 
 	@BeforeTest
 	public void setup() throws IOException {
@@ -32,7 +32,7 @@ public class TC003_SignUp extends ProjectSpecifiedMethod{
 		.enter_psw2(psw2)
 		.enter_phone(phone)
 		.click_submit()
-		.validate_login();
+		.validate_signUp();
 	}
 
 }

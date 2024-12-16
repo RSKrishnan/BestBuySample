@@ -16,6 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -49,8 +50,9 @@ public class UtilityClass {
 			driver = new ChromeDriver(option);
 		} else
 			driver = new FirefoxDriver();
-		driver.get(url);
-		driver.manage().window().maximize();
+		driver.get(url);		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//*[.='United States']")).click();
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 
@@ -105,7 +107,6 @@ public class UtilityClass {
 		HttpURLConnection con = null;
 		int responseCode = 200;
 		String url = "";
-	//	List<WebElement> links = driver.findElements(By.xpath("//*[@class=\"body-copy-sm mr-200\"]"));
 		Iterator<WebElement> it = links.iterator();
 		while (it.hasNext()) {
 			url = it.next().getAttribute("href");

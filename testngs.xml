@@ -4,25 +4,26 @@
 	<listeners>
 		<listener class-name="utils.ListnerClass"></listener>
 	</listeners>
-	<parameter name="url" value="https://www.bestbuy.com/?intl=nosplash"></parameter>
-	<test name="SignUp and login">
+	<parameter name="url" value="https://www.bestbuy.com/"></parameter>
+	<test name="SignUp and SignIn">
 		<parameter name="browser" value="incognito-Chrome"></parameter>
 		<classes>
-			<class name="test.TC003_SignUp" />
 			<class name="test.TC001_SignIn" />
+			<class name="test.TC002_SignUp" />
 		</classes>
 	</test> <!-- Test -->
-		<test name="Shopping">
+
+	<test name="Shopping">
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="test.TC002_ShoppingProduct" />
+			<class name="test.TC005_ShoppingProduct" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="Validation">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="test.TC004_MenuValidation" />
-			<class name="test.TC006_BottomLinks" />
+			<class name="test.TC003_MenuValidation" />
+			<class name="test.TC004_linksValidation" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
