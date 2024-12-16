@@ -39,7 +39,8 @@ public class ProjectSpecifiedMethod extends UtilityClass{
 	
 	@Parameters({"browser","url"})
 	@BeforeMethod
-	public void launchAndLoadURL(String browser,String url) {	
+	public void launchAndLoadURL(String browser,String url) {
+
 		browserLaunch(browser,url);		
 	}
 	

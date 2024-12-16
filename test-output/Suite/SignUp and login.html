@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SignUp and login</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 15 23:24:38 IST 2024</td>
+<td>Started on:</td><td>Mon Dec 16 00:02:49 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22450 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18660 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,108 +67,18 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.TC001_SignIn.signUpTest()'><b>signUpTest</b><br>Test class: test.TC001_SignIn<br>Parameters: kssangeetha158@gmail.com, Sriramsangi@2224</td>
-<td><div><pre>java.lang.AssertionError: expected [Sign In - Sign In Options - Best Buy] but found [Best Buy | Official Online Store | Shop Now &amp; Save]
-	at page.HomePage.validate_login(HomePage.java:49)
-	at test.TC001_SignIn.signUpTest(TC001_SignIn.java:34)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1589931229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1589931229'><pre>java.lang.AssertionError: expected [Sign In - Sign In Options - Best Buy] but found [Best Buy | Official Online Store | Shop Now &amp; Save]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at page.HomePage.validate_login(HomePage.java:49)
-	at test.TC001_SignIn.signUpTest(TC001_SignIn.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div></td>
-<td>10</td>
-<td>test.TC001_SignIn@7f560810</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='test.TC004_MenuValidation.menuValidation()'><b>menuValidation</b><br>Test class: test.TC004_MenuValidation</td>
-<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
-Caused by: java.lang.NullPointerException
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(XSSFWorkbook.java:1217)
-	at utils.UtilityClass.readExcel(UtilityClass.java:82)
-	at base.ProjectSpecifiedMethod.readData(ProjectSpecifiedMethod.java:53)
-	... 20 more
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2128169374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2128169374'><pre>java.lang.RuntimeException: java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:163)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:430)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1276)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:991)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1081)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-Caused by: java.lang.NullPointerException
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(XSSFWorkbook.java:1217)
-	at utils.UtilityClass.readExcel(UtilityClass.java:82)
-	at base.ProjectSpecifiedMethod.readData(ProjectSpecifiedMethod.java:53)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:137)
-	... 20 more
-</pre></div></td>
-<td>0</td>
-<td>test.TC004_MenuValidation@69d9c55</td></tr>
+<td title='test.TC002_ShoppingProduct.shopping()'><b>shopping</b><br>Test class: test.TC002_ShoppingProduct<br>Parameters: PNY - 32GB Attaché 4 Type A USB 2.0 Flash Drive 3-Pack - Black</td>
+<td></td>
+<td>7</td>
+<td>test.TC002_ShoppingProduct@153f5a29</td></tr>
 </table><p>
 </body>
 </html>

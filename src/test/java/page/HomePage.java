@@ -3,11 +3,14 @@ package page;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+
+import com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition.Key;
 
 import base.ProjectSpecifiedMethod;
 
@@ -22,14 +25,20 @@ public class HomePage extends ProjectSpecifiedMethod {
 	@FindBy(id = "gh-search-input")
 	WebElement search;
 
-	@FindBy(xpath = "//*[@class='header-search-button ']")
-	WebElement searchicon;
+	@FindBy(xpath = "//*[text()='Add to Cart']")
+	WebElement addToCart;
 	
 	@FindBy(xpath="//*[text()=\"Menu\"]")
 	WebElement menu;
 	
 	@FindBy(tagName="a")
 	List<WebElement> menuOptions;
+	
+	@FindBy(xpath="//span[@class='header-search-icon']//*[name()='svg']")
+	WebElement searchBox;
+	
+	@FindBy(xpath="//*[text()='Continue shopping']")
+	WebElement continueShopping;
 
 	public HomePage(WebDriver driver) {
 		
@@ -47,30 +56,36 @@ public class HomePage extends ProjectSpecifiedMethod {
 		String expected=driver.getTitle();
 		takeScreenShot("2.SingIn");
 		Assert.assertEquals(actual, expected);
-		
 	}
 
 	public SignInPage click_signin() {
 		signin.click();
 		return new SignInPage(driver);
 	}
-	//
-
-	public HomePage search(String searchid) {
-		search.sendKeys(searchid);
+	
+	//Shopping Product
+	public HomePage search_Product(String product) {
+		search.sendKeys(product);
+		searchBox.click();
+		return this;
+	}
+	
+	public HomePage click_continueShopping() {
+		searchBox.click();
 		return this;
 	}
 
-	public ProductDetails searchicon() {
-		searchicon.click();
-		return new ProductDetails();
+	public HomePage click_addToCart() {
+		addToCart.click();
+		return this;
 	}
 
+	//menu option selection
 	public HomePage click_menu() {
 		menu.click();
 			return this;
 	}
-
+	//menu validation
 	public void validate_menu() {
 		List<WebElement> links = menuOptions;
 		brokenLinkChecking(links);
