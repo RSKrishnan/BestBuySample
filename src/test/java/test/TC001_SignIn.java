@@ -14,14 +14,14 @@ public class TC001_SignIn extends ProjectSpecifiedMethod{
 	@BeforeTest
 	public void setup() throws IOException {
 		testName="SignInTest";
-		testDescription="Testing the SignUp functionality";
+		testDescription="Testing the SignIn functionality";
 		testAuthor="Ram";
 		testCategory="Regression Testing";
-		sheetName="SignUpTestData";
+		sheetName="SignInTestData";
 	}
 	
 	@Test(dataProvider="readData")
-	public void signUpTest(String email,String password) throws IOException {
+	public void signInTest(String email,String password) throws IOException {
         
 		HomePage obj=new HomePage(driver);
 		obj.click_Account()

@@ -16,6 +16,12 @@ import base.ProjectSpecifiedMethod;
 
 public class HomePage extends ProjectSpecifiedMethod {
 
+	
+
+	@FindBy(xpath="//*[text()=\"Create Account\"]")
+	WebElement createAccnt;
+	//
+	
 	@FindBy(xpath = "//*[@id=\"account-menu-account-button\"]/span")
 	WebElement account;
 
@@ -61,6 +67,11 @@ public class HomePage extends ProjectSpecifiedMethod {
 	public SignInPage click_signin() {
 		signin.click();
 		return new SignInPage(driver);
+	}
+	
+	public SignUpPage click_createAccnt() {
+		createAccnt.click();
+		return new SignUpPage(driver);
 	}
 	
 	//Shopping Product

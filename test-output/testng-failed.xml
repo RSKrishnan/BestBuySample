@@ -9,7 +9,7 @@
   <test name="SignUp and login">
     <parameter name="browser" value="incognito-Chrome"/>
     <classes>
-      <class name="test.TC002_ShoppingProduct"/>
+      <class name="test.TC003_SignUp"/>
     </classes>
   </test> <!-- SignUp and login -->
 </suite> <!-- Failed suite [Suite] -->
